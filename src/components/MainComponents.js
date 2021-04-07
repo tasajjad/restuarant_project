@@ -7,11 +7,11 @@ import Footer from './footer/Footer.js';
 const MainComponent =()=>{
     return(
 
-        <diV>
+        <div>
                 <Header/>
                 <Body/>
                 <Footer/>
-        </diV>
+        </div>
     );
 }
 
