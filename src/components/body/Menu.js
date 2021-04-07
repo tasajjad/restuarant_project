@@ -11,7 +11,7 @@ class Menu extends Component {
     render() {
         const menu=this.state.dishes.map((item)=>{
                 return (
-                    <MenuItem dishe={item} key={item.id}/>
+                    <MenuItem dish={item} key={item.id}/>
                 );
         })
 
