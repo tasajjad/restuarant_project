@@ -3,3 +3,17 @@
 }
 
 
+.footer{
+  background-color: #D1C4E9;
+  margin:0  px auto;
+  padding-top: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.row-content{
+  margin: 0 px auto;
+  padding:50 0 px 50 px 0 px;
+  min-height: 400 px;
+
+}

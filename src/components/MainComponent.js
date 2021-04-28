@@ -1,12 +1,11 @@
-import React from 'react';
-
+import React from'react';
 import Header from './header/Header.js';
 import Body from './body/Body.js';
 import Footer from './footer/Footer.js';
 
-const MainComponent =()=>{
-    return(
 
+const MainComponent = ()=>{
+    return (
         <div>
                 <Header/>
                 <Body/>
@@ -15,4 +14,4 @@ const MainComponent =()=>{
     );
 }
 
-export default MainComponent;
+export default MainComponent

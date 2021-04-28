@@ -1,33 +1,20 @@
 import React from 'react';
-import {Card,CardImg,CardImgOverlay,CardBody,CardTitle} from 'reactstrap';
+import {Card,CardBody,CardImg,CardTitle} from 'reactstrap'
+import CardImgOverlay from 'reactstrap/lib/CardImgOverlay';
 
 const MenuItem=props=>{
 
-    // console.log(props.dish.image)
+    //  console.log(props)
     return(
-
-        
         <div>
-                <Card style={{margin:"10px"}}> 
-                    <CardBody> 
-
-                       < CardImg width="100%" 
-                       alt={props.dish.name} 
-                       src={props.dish.image}
-                       style={{opacity:"0.5"}} />
-
-                       <CardImgOverlay>
-                                 <CardTitle style={{cursor:"pointer "}}
-                                 onClick={props.DishSelect}
-                                //  onClick={props.DishSelect.bind(this,props.dish)}
-                                 
-                                 >
-                                     
-                                     
-                                     {props.dish.name}</CardTitle>  
-                            </CardImgOverlay>
-                        </CardBody>
-                </Card>
+            <Card style={{margin:"10px"}}> 
+                <CardBody>
+                    <CardImg width="100%" alt={props.dish.name} src={props.dish.image} style={{opacity:"0.5"}}/>
+                    <CardImgOverlay>
+                        <CardTitle style={{cursor:"pointer"}} onClick={props.DishSelect}>{props.dish.name}</CardTitle>
+                    </CardImgOverlay>
+                </CardBody>
+            </Card>
         </div>
     );
 }
