@@ -1,17 +1,12 @@
 import React from 'react';
-import Loading from './Loading';
 
-const About=(props)=>{
-    document.title="About"
- 
-    return(
+const About = () => {
+    document.title = "About";
+    return (
         <div>
-            <Loading/>
-        </div>
 
-        
+        </div>
     );
 }
 
-
-export default  About;
+export default About;

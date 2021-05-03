@@ -1,17 +1,16 @@
-import React from'react';
-import Header from './header/Header.js';
-import Body from './body/Body.js';
-import Footer from './footer/Footer.js';
+import React from 'react';
+import Header from './header/Header';
+import Footer from './footer/Footer';
+import Body from './body/Body';
 
-
-const MainComponent = ()=>{
+const MainComponent = () => {
     return (
         <div>
-                <Header/>
-                <Body/>
-                <Footer/>
+            <Header />
+            <Body />
+            <Footer />
         </div>
     );
 }
 
-export default MainComponent
+export default MainComponent;

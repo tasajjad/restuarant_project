@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import Loading from './Loading'
-
+import Loading from './Loading';
 
 class Home extends Component {
-    
-        render() {
-        document.title = "TaSajjad Restuarent";
-        
+    render() {
+        document.title = "Bohubrihi Restaurant";
         return (
             <div>
-                    <Loading/>
+                <Loading />
             </div>
         );
     }

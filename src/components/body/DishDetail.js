@@ -1,27 +1,26 @@
 import React from 'react';
-import {Card,CardBody,CardImg,CardTitle,CardText} from 'reactstrap'
-import LoadComments from './LoadComments.js';
-import CommentsForm from './CommentsForm.js';
-import {baseUrl} from '../../redux/baseUrl'
-const DishDetail =props=>{
-    // console.log(props.dish)
-    return(
-        <div >
-            <Card >
-                <CardImg top src={baseUrl+props.dish.image} alt={props.dish.name}/>
-                <CardBody style={{textAlign:"left"}}>
+import { Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
+import LoadComments from './LoadComments';
+import CommentForm from './CommentForm';
+import { baseUrl } from '../../redux/baseUrl';
+
+const DishDetail = props => {
+    return (
+        <div>
+            <Card style={{ marginTop: "10px" }}>
+                <CardImg top src={baseUrl + props.dish.image} alt={props.dish.name} />
+                <CardBody style={{ textAlign: "left" }}>
                     <CardTitle>{props.dish.name}</CardTitle>
-                    <CardText> {props.dish.description} </CardText>
-                       
-                      
-                    <CardText> Price:{props.dish.price}/-</CardText>
-                    <hr/>
-                    <LoadComments comments={props.comments  } commentsIsLoading={props.commentsIsLoading} />    
-                    <hr/>
-                    
-                   <CommentsForm dishId={props.dish.id} addComments={props.addComments}/>
-               
-                   
+                    <CardText>
+                        {props.dish.description}
+                    </CardText>
+                    <CardText>
+                        Price: {props.dish.price}/-
+                    </CardText>
+                    <hr />
+                    <LoadComments comments={props.comments} commentIsLoading={props.commentIsLoading}></LoadComments>
+                    <hr />
+                    <CommentForm dishId={props.dish.id} addComment={props.addComment} />
                 </CardBody>
             </Card>
         </div>
