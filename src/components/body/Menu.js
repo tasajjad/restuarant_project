@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MenuItem from './MenuItem';
 import DishDetail from './DishDetail';
-import { CardColumns, Modal, ModalBody, ModalFooter, Button } from 'reactstrap';
+import { CardColumns, Modal, ModalBody, ModalFooter, Button ,Alert} from 'reactstrap';
 import { connect } from 'react-redux';
 import { addComment, fetchDishes, fetchComments } from '../../redux/actionCreators';
 import Loading from './Loading';
@@ -52,6 +52,10 @@ class Menu extends Component {
             return (
                 <Loading />
             );
+        }else if(this.props.dishes.errMessage!=null){
+                return (
+                    <Alert color="danger" >{this.props.dishes.errMessage}</Alert>
+                )
         }
         else {
             const menu = this.props.dishes.dishes.map(item => {

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { Component } from 'react';
 import { Button, FormGroup, Label, Col } from 'reactstrap';
 import { Form, Control, Errors, actions } from 'react-redux-form';
@@ -42,6 +43,18 @@ class Contact extends Component {
                     }, 2000)
                 }
             })
+            .catch((error) => {
+                this.setState({
+                    alertShow: true,
+                    alertText:error.message,
+                    alertType:"danger"
+                });
+                setTimeout(() => {
+                    this.setState({
+                        alertShow: false
+                    })
+                }, 2000);
+            })
         this.props.resetFeedbackForm();
     }
 
@@ -53,6 +66,7 @@ class Contact extends Component {
 
                     <div className="col-12">
                         <h3>Send us your Feedback</h3>
+                        {/* This is Alert Component */}
                         <Alert isOpen={this.state.alertShow} color={this.state.alertType}>{this.state.alertText}</Alert>
                     </div>
                     <div className="col-12 col-md-7">
